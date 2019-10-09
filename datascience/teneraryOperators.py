@@ -27,3 +27,7 @@ import itertools
 percentage_15_allowed_dic = dict(itertools.islice(content_ratings.items(), 3))
 percentage_15_allowed = sum(percentage_15_allowed_dic.values())
 print(percentage_15_allowed)
+
+stats = {'a':1000, 'b':3000, 'c': 100}
+inverse = [(value, key) for key, value in stats.items()]
+print( max(inverse)[1])
