@@ -44,3 +44,35 @@ def functionOne(para, paraa, parab):
     # print (locals())
 
 functionOne('HP', 'MA', 'aM')
+
+T = (10,20,30,40,50)
+for var in T:
+   print (var)
+
+values = [0,1,2,3,4,5,6]
+movie_names = ['wtf','why am i doing this','just to kill time','and torture myself','hell', 'no', 'fuck']
+year = ['200{}'.format(i) for i in range(8)]
+# print(year)
+
+high_ratings = {}
+low_ratings = {}
+years = {}
+
+lists = [{'movies':[high_ratings,low_ratings,years]}]
+
+# print(lists)
+
+temp = dict(zip(movie_names, values))
+# print(list(temp.values()))
+print(temp.items())
+
+for tem in temp.items():
+    if tem[1] <= 3:
+        low_ratings[tem[0]] = tem[1]
+    elif tem[1] > 3:
+        high_ratings[tem[0]] = tem[1]
+print(low_ratings)
+print(high_ratings)
+print(lists)
+
+
