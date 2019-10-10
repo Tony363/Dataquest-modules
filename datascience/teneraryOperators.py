@@ -31,3 +31,16 @@ print(percentage_15_allowed)
 stats = {'a':1000, 'b':3000, 'c': 100}
 inverse = [(value, key) for key, value in stats.items()]
 print( max(inverse)[1])
+
+def functionOne(para, paraa, parab):
+    arguments = locals()
+    print(arguments)
+    for keys in arguments:
+        arguments[keys] = str(arguments[keys]).lower()
+        print (arguments[keys])
+    # para = para.lower()
+    # paraa = paraa.lower()
+    # parab = parab.lower()
+    # print (locals())
+
+functionOne('HP', 'MA', 'aM')
