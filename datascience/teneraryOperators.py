@@ -49,14 +49,16 @@ T = (10,20,30,40,50)
 for var in T:
    print (var)
 
+import re
+
 values = [0,1,2,3,4,5,6]
 movie_names = ['wtf','why am i doing this','just to kill time','and torture myself','hell', 'no', 'fuck']
-year = ['200{}'.format(i) for i in range(8)]
+year = ['200{}'.format(i) for i in range(7)]
 # print(year)
 
-high_ratings = {}
-low_ratings = {}
-years = {}
+high_ratings = {key:[movie for i,movie in enumerate(movie_names) if i == key  ] for key in values if key > 3 }
+low_ratings = {key:[movie for i,movie in enumerate(movie_names) if i == key ] for key in values if key <= 3 }
+years = {key:[(movie,value) for i,movie in enumerate(movie_names) for j,value in enumerate(values) if i or j == int(key[3])  ] for key in year}
 
 lists = [{'movies':[high_ratings,low_ratings,years]}]
 
@@ -64,15 +66,18 @@ lists = [{'movies':[high_ratings,low_ratings,years]}]
 
 temp = dict(zip(movie_names, values))
 # print(list(temp.values()))
-print(temp.items())
+# print(temp.items())
 
-for tem in temp.items():
-    if tem[1] <= 3:
-        low_ratings[tem[0]] = tem[1]
-    elif tem[1] > 3:
-        high_ratings[tem[0]] = tem[1]
-print(low_ratings)
-print(high_ratings)
+# for tem in temp.items():
+#     if tem[1] <= 3:
+#         low_ratings[tem[0]] = tem[1]
+#     elif tem[1] > 3:
+#         high_ratings[tem[0]] = tem[1]
+# print(low_ratings)
+# print(high_ratings)
 print(lists)
+
+# mydic = {key:[] for key in movie_names}
+# print(mydic)
 
 
