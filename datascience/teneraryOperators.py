@@ -51,18 +51,19 @@ for var in T:
 
 import re
 
-values = [0,1,2,3,4,5,6]
+values = [i for i in range(7)]
+# print(values)
 movie_names = ['wtf','why am i doing this','just to kill time','and torture myself','hell', 'no', 'fuck']
 year = ['200{}'.format(i) for i in range(7)]
 # print(year)
 
 high_ratings = {key:[movie for i,movie in enumerate(movie_names) if i == key  ] for key in values if key > 3 }
 low_ratings = {key:[movie for i,movie in enumerate(movie_names) if i == key ] for key in values if key <= 3 }
-years = {key:[(movie,value) for i,movie in enumerate(movie_names) for j,value in enumerate(values) if i or j == int(key[3])  ] for key in year}
+years = {key: [(movie,value) for movie,value in zip (movie_names, values) ] for key in year}
 
 lists = [{'movies':[high_ratings,low_ratings,years]}]
 
-# print(lists)
+print(lists)
 
 temp = dict(zip(movie_names, values))
 # print(list(temp.values()))
@@ -75,7 +76,7 @@ temp = dict(zip(movie_names, values))
 #         high_ratings[tem[0]] = tem[1]
 # print(low_ratings)
 # print(high_ratings)
-print(lists)
+# print(lists)
 
 # mydic = {key:[] for key in movie_names}
 # print(mydic)
