@@ -81,4 +81,94 @@ temp = dict(zip(movie_names, values))
 # mydic = {key:[] for key in movie_names}
 # print(mydic)
 
+#### 1 if A else 2 if B else 3
+
+def myexpr(A, B):
+    if A:
+        return 1
+    else:
+        if B:
+            return 2
+        else:
+            return 3
+
+#[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 1), (0, 1, 2)]
+nested_ternary_loop = [(i, j, k) for i in range(1) for j in range(2) for k in range(3)]
+
+'''
++-----------------------------------------------------------------------------------+
+|                                    Problem:                                       |
++-----------------------------------------------------------------------------------+
+| Convert a                                                                         |
+| nested if-else block into                                                         |
+| a single line of code by using Pythons ternary expression.                        |
+| In simple terms convert:                                                          |
+|                                                                                   |
+|      1.f_nested_if_else(*args) (  which uses                                      |
+|      ````````````````````        nested if-else's)                                |
+|            |                                                                      |
+|            +--->to its equivalent---+                                             |
+|                                     |                                             |
+|                                     V                                             |
+|                              2.f_nested_ternary(*args) (     which uses           |
+|                              ```````````````````       nested ternary expression) |
++-----------------------------------------------------------------------------------+
+'''
+'''
+Note:
+C:Conditions  (C, C1, C2)
+E:Expressions (E11, E12, E21, E22)
+Let all Conditions, Expressions be some mathematical function of args passed to the function
+'''    
+
+#-----------------------------------------------------------------------------------+
+#| 1. |      Using nested if-else                                                   |
+#-----------------------------------------------------------------------------------+
+def f_nested_if_else(*args):
+    if(C):
+        if(C1):
+            return E11
+        else:
+            return E12
+    else:
+        if(C2):
+            return E21
+        else:
+            return E22
+
+#-----------------------------------------------------------------------------------+
+#| 2. |      Using nested ternary expression                                        |
+#-----------------------------------------------------------------------------------+
+def f_nested_ternary(*args):
+    return ( (E11) if(C1)else (E12) )   if(C)else   ( (E21) if(CF)else (E22) )
+
+
+#-----------------------------------------------------------------------------------+
+#-----------------------------------------------------------------------------------|
+#-----------------------------------------------------------------------------------|
+#-----------------------------------------------------------------------------------|
+#-----------------------------------------------------------------------------------+
+
+#     +-----------------------------------------------------------------------------+
+#     |                               Visualization:                                |
+#     +-----------------------------------------------------------------------------+
+#     |         Visualize the ternary expression like a binary tree :               |
+#     |           -Starting from the root and  moving down to the leaves.           |
+#     |           -All the internal nodes being conditions.                         |
+#     |           -All the leaves being expressions.                                |
+#     +-----------------------------------------------------------------------------+
+                                     _________________
+                                     |f_nested_ternary|                                 
+                                     ``````````````````
+            ( (E11) if(C1)else (E12) )   if(C)else   ( (E21) if(C2)else (E22) )
+                |       |        |          |            |       |        |
+                |       |        |          |            |       |        |
+                V       V        V          V            V       V        V                                                                             
+Level-1|                  +----------------(C)-----------------+         
+--------             True/          __________________           \False         
+                        V           |f_nested_if_else|            V              
+Level-2|          +----(C1)----+    ``````````````````     +----(C2)----+     
+--------     True/              \False                True/              \False
+                V                V                       V                V     
+Level-3|    ( (E11)            (E12) )               ( (E21)            (E22) ) 
 
