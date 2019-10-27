@@ -157,18 +157,18 @@ def f_nested_ternary(*args):
 #     |           -All the internal nodes being conditions.                         |
 #     |           -All the leaves being expressions.                                |
 #     +-----------------------------------------------------------------------------+
-                                     _________________
-                                     |f_nested_ternary|                                 
-                                     ``````````````````
-            ( (E11) if(C1)else (E12) )   if(C)else   ( (E21) if(C2)else (E22) )
-                |       |        |          |            |       |        |
-                |       |        |          |            |       |        |
-                V       V        V          V            V       V        V                                                                             
-Level-1|                  +----------------(C)-----------------+         
---------             True/          __________________           \False         
-                        V           |f_nested_if_else|            V              
-Level-2|          +----(C1)----+    ``````````````````     +----(C2)----+     
---------     True/              \False                True/              \False
-                V                V                       V                V     
-Level-3|    ( (E11)            (E12) )               ( (E21)            (E22) ) 
+#                                      _________________
+#                                      |f_nested_ternary|                                 
+#                                      ``````````````````
+#             ( (E11) if(C1)else (E12) )   if(C)else   ( (E21) if(C2)else (E22) )
+#                 |       |        |          |            |       |        |
+#                 |       |        |          |            |       |        |
+#                 V       V        V          V            V       V        V                                                                             
+# Level-1|                  +----------------(C)-----------------+         
+# --------             True/          __________________           \False         
+#                         V           |f_nested_if_else|            V              
+# Level-2|          +----(C1)----+    ``````````````````     +----(C2)----+     
+# --------     True/              \False                True/              \False
+#                 V                V                       V                V     
+# Level-3|    ( (E11)            (E12) )               ( (E21)            (E22) ) 
 
