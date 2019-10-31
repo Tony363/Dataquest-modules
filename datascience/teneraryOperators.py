@@ -51,17 +51,59 @@ for var in T:
 
 import re
 
+class Movie():
+    def __init__(self, title, year, rating=1):
+        self.title = title
+        self.year = year
+        self.rating = rating
+
+
+    def __repr__(self):
+        return """Movie("{}", {}, {})""".format(self.title, self.year, self.rating)
+
+    def __str__(self):
+        return "{} ({})".format(self.title, self.year)
+
+
+movies = [
+    Movie("Avengers: Endgame", 2019),
+    Movie("Star Wars: The Rise of Skywalker", 2019)
+]
+
+def get_movie_catalog_by_year(movie_list):
+    movie_dictionary = {} # key is year, value is a list of movie tuples
+    for movie in movie_list:
+        current_year_movies = movie_dictionary.get(movie.year, [])
+
+        current_year_movies.append(movie)
+        
+        movie_dictionary[movie.year] = current_year_movies
+
+    return movie_dictionary
+
+
+print(get_movie_catalog_by_year(movies))
+print(movies[0])
+
+# movies = []
+# for row in csvReader.getline():
+#     m = Movie(row[0], row[1], row[2])
+#     movies.append(m)
+
+
 values = [i for i in range(7)]
 # print(values)
 movie_names = ['wtf','why am i doing this','just to kill time','and torture myself','hell', 'no', 'fuck']
-year = ['200{}'.format(i) for i in range(7)]
+years = ['200{}'.format(i) for i in range(7)]
 # print(year)
 
 high_ratings = {key:[movie for i,movie in enumerate(movie_names) if i == key  ] for key in values if key > 3 }
 low_ratings = {key:[movie for i,movie in enumerate(movie_names) if i == key ] for key in values if key <= 3 }
-years = {key: [(movie,value) for movie,value in zip (movie_names, values) ] for key in year}
+years_dict = {year: [(movie,value) for movie,value in zip (movie_names, values) ] for year in years}
 
 lists = [{'movies':[high_ratings,low_ratings,years]}]
+
+
 
 print(lists)
 
