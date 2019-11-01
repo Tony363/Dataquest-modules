@@ -57,7 +57,6 @@ class Movie():
         self.year = year
         self.rating = rating
 
-
     def __repr__(self):
         return """Movie("{}", {}, {})""".format(self.title, self.year, self.rating)
 
@@ -67,23 +66,29 @@ class Movie():
 
 movies = [
     Movie("Avengers: Endgame", 2019),
-    Movie("Star Wars: The Rise of Skywalker", 2019)
+    Movie("Star Wars: The Rise of Skywalker", 2019),
+    Movie('Code Geass: R2', 2006),
+    Movie('Code Geass: Lelouch of Rebellion', 2006),
+    Movie('Eureka Seven', 2002),
+    Movie('Gundam Seed', 2002),
+    Movie('Evangelion Neogensis', 2005),
+    Movie('Gundam Seed Destiny', 2005)
 ]
 
 def get_movie_catalog_by_year(movie_list):
     movie_dictionary = {} # key is year, value is a list of movie tuples
     for movie in movie_list:
         current_year_movies = movie_dictionary.get(movie.year, [])
-
-        current_year_movies.append(movie)
         
+        current_year_movies.append(movie)
+
         movie_dictionary[movie.year] = current_year_movies
 
     return movie_dictionary
 
 
 print(get_movie_catalog_by_year(movies))
-print(movies[0])
+# print(movies[0])
 
 # movies = []
 # for row in csvReader.getline():
@@ -105,7 +110,7 @@ lists = [{'movies':[high_ratings,low_ratings,years]}]
 
 
 
-print(lists)
+# print(lists)
 
 temp = dict(zip(movie_names, values))
 # print(list(temp.values()))
