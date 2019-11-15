@@ -26,8 +26,11 @@ def open_dataset(file_name):
     return data
 
 apps_data = open_dataset('AppleStore.csv')
-dic = [app[:3] for app in apps_data[1:]]
-print(dic)
+datas = [app[:3] for app in apps_data[1:]]
+print(datas)
+
+    
+    
 
 ## 4. The Official Python Documentation ##
 
