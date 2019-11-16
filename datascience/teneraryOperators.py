@@ -235,16 +235,13 @@ print(array_count9([i for i in range(999)]))
 #     return False if (ord(char) > 127) else True for char in string
 
 def take_string(string):
+    count = 0
     for char in string:
-        value = ord(char)
-        if value > 127:
-            print(value)
-            return False, 
-        else:
-            return True
-
-print(take_string('Instagram'),take_string('爱奇艺PPS -《欢乐颂2》电视剧热播')
-     ,take_string('Docs To Go™ Free Office Suite'), take_string('Instachat 😜'))
-print([i for i in 'Instachat 😜'])
-print(ord('™'))
- 
+        if ord(char) > 127:
+            count += 1 
+    if count > 3:
+        return False
+    else:
+        return True
+        
+print(take_string('Instagram'),take_string('爱奇艺PPS -《欢乐颂2》电视剧热播'),take_string('Docs To Go™ Free Office Suite'),take_string('Instachat 😜'))
