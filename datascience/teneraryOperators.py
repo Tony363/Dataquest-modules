@@ -219,3 +219,32 @@ def f_nested_ternary(*args):
 #                 V                V                       V                V     
 # Level-3|    ( (E11)            (E12) )               ( (E21)            (E22) ) 
 
+# def array_count9(nums):
+#     count = 0
+#     for i in nums:
+#         if i == 9:
+#             count += 1
+#     return count
+
+def array_count9(nums):
+    return sum(1 if num == 9 else 0 for num in nums)
+
+print(array_count9([i for i in range(999)]))
+
+# def take_string(string):
+#     return False if (ord(char) > 127) else True for char in string
+
+def take_string(string):
+    for char in string:
+        value = ord(char)
+        if value > 127:
+            print(value)
+            return False, 
+        else:
+            return True
+
+print(take_string('Instagram'),take_string('爱奇艺PPS -《欢乐颂2》电视剧热播')
+     ,take_string('Docs To Go™ Free Office Suite'), take_string('Instachat 😜'))
+print([i for i in 'Instachat 😜'])
+print(ord('™'))
+ 
