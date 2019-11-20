@@ -1,13 +1,20 @@
 import csv
 import os
 
+
+
 new_format = []
+
 INPUT_DIR = r"C:\Users\Tony\Desktop\notpat"
+
 for filename in os.listdir(INPUT_DIR):
+
     with open(os.path.join(INPUT_DIR,filename), 'r+', encoding='utf-8') as infile:
-        reader = csv.reader(infile)
-        for row in reader:
-            new_format.append(row[0])
+        head = [int(next(infile)) for row in range(2)]
+
+        for row in head:
+            new_format.append(row)
+
 print(new_format)
 
 
