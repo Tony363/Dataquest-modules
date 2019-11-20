@@ -21,3 +21,13 @@ print(set(array))
 
         
     
+x = [['Goodday' for j in range(8)] for i in range(8)]
+y = []
+for row in x:
+#     print(row)
+    for word in row:
+        if word == 'Goodday':
+            word = 'Badday'
+            y.append(word)
+
+print(y)
