@@ -18,6 +18,7 @@ def Compute_investment(income,dependants,filer):
     elif (income > 510301) and filer =='Single':
         income *= 0.37
         tax_amount += income
+    elif (income >= 0 and income <= 9700) and filer == 'Married Filing Jointly':
         pass
         
     
