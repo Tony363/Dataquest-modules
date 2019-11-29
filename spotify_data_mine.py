@@ -1,9 +1,11 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials 
+import json
 
 
 def albumSongs(uri):
     album = uri #assign album uri to a_name
+    # print(album)
     spotify_albums[album] = {} #Creates dictionary for that specific album
     #Create keys-values of empty lists inside nested dictionary for album
     spotify_albums[album]['album'] = [] #create empty list
@@ -13,7 +15,7 @@ def albumSongs(uri):
     spotify_albums[album]['uri'] = []
     tracks = sp.album_tracks(album) #pull data on album tracks
     for n in range(len(tracks['items'])): #for each song track
-        spotify_albums[album]['album'].append(album_names[album_count]) #append album name tracked via album_count
+        # spotify_albums[album]['album'].append(album_names[album_count]) #append album name tracked via album_count
         spotify_albums[album]['track_number'].append(tracks['items'][n]['track_number'])
         spotify_albums[album]['id'].append(tracks['items'][n]['id'])
         spotify_albums[album]['name'].append(tracks['items'][n]['name'])
@@ -53,7 +55,10 @@ def audio_features(album):
         track_count+=1
 
 
-
+def mapping(item):
+    uri = item['album']['uri'] 
+    
+    return uri
 
 #To access authorised Spotify data
 client_id = '716259e99ecd421580450ad70b0107d1'
@@ -64,30 +69,44 @@ sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 #spotify object to access 
 APIname = 'sample' #chosen artist
 result = sp.search(APIname) #search query
-print(result['tracks']['items'][0]['artists'])
+items = result['tracks']['items']
+
+with open('spotify_monthly_listners.json', 'w') as outfile:
+    json.dump(items, outfile, sort_keys=True, indent=4)
+
+
+album_uris = map(mapping, items)
+# print(list(album_uris))
+
+
+
+
 
 
 spotify_albums = {}
 album_count = 0
+album_names = []
 for i in album_uris: #each album
     albumSongs(i)
-    print("Album " + str(album_names[album_count]) + " songs has been added to spotify_albums dictionary")
+    # print("Album " + str(album_names[album_count]) + " songs has been added to spotify_albums dictionary")
     album_count+=1 #Updates album count once all tracks have been added
 
-# import time
-# import numpy as np
-# sleep_min = 2
-# sleep_max = 5
-# start_time = time.time()
-# request_count = 0
-# for i in spotify_albums:
-#     audio_features(i)
-#     request_count+=1
-#     if request_count % 5 == 0:
-#         print(str(request_count) + " playlists completed")
-#         time.sleep(np.random.uniform(sleep_min, sleep_max))
-#         print('Loop #: {}'.format(request_count))
-# print('Elapsed Time: {} seconds'.format(time.time() - start_time))   
+# print(spotify_albums)
+
+import time
+import numpy as np
+sleep_min = 2
+sleep_max = 5
+start_time = time.time()
+request_count = 0
+for i in spotify_albums:
+    audio_features(i)
+    request_count+=1
+    if request_count % 5 == 0:
+        print(str(request_count) + " playlists completed")
+        time.sleep(np.random.uniform(sleep_min, sleep_max))
+        print('Loop #: {}'.format(request_count))
+print('Elapsed Time: {} seconds'.format(time.time() - start_time))   
 
 
 # dic_df = {}

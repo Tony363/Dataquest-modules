@@ -6,16 +6,18 @@ import os
 
 new_format = []
 
-INPUT_DIR = r"C:\Users\Tony\Desktop\notpat"
+INPUT_DIR = r"C:\Users\Tony\Desktop\github\xgboost-with-raymond\excel"
 
 for filename in os.listdir(INPUT_DIR):
 
-    with open(os.path.join(INPUT_DIR,filename), 'r+', encoding='utf-8') as infile:
-        while True:
-            head = [int(next(infile)) for row in range(2)]
+    with open(os.path.join(INPUT_DIR,filename), 'r+') as infile:#encoding='utf-8'
+        
+        head = csv.reader(infile)
 
-            for row in head:
-                new_format.append(row)
+        for row in head:
+            if 'ï»¿' in row:
+                continue
+            new_format.append(row[0])
 
 print(new_format)
 
