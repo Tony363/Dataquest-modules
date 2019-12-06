@@ -110,7 +110,7 @@ lists = [{'movies':[high_ratings,low_ratings,years]}]
 
 
 
-# print(lists)
+print(lists)
 
 temp = dict(zip(movie_names, values))
 # print(list(temp.values()))
