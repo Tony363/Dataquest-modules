@@ -82,7 +82,7 @@
 # BONUS: Move all of the functions out of this file and into another Python file
 # called grading_functions.py. Then import them into this file so that it runs.
 
-from grading_function import get_weighted_average
+from grading_function import get_weighted_average, class_average
 
 steve = {"name":"Steve",
         "homework":[],
@@ -157,6 +157,8 @@ print(avg_steve_tests)
 print('alice\'s weighted average is {}'.format(get_weighted_average(students,1)))
 print('steve\'s weighted average is {}'.format(get_weighted_average(students, 0)))
 print('tyler\'s weighted average is {}'.format(get_weighted_average(students,2)))
+
+print(class_average(students))
 
 
 

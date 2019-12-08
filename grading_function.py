@@ -18,9 +18,10 @@ def get_weighted_average(students,n):
 def class_average(students):
     Number_class = len(students)
     List = []
-    add = sum(List)
+    
     for i in range(Number_class):
         List.append(get_weighted_average(students,i))
+    add = sum(List)
     return add/Number_class
 
     
