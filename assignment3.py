@@ -9,6 +9,8 @@
 #   c. Set the value of the name key to the name of the student – e.g. Steve's name should be "Steve"
 #   d. Set the other keys – e.g. homework, quizzes, and tests – to empty lists (we'll fill them in later)
 #   e. Print these empty dictionaries
+from grading_function import get_weighted_average
+
 steve = {"name":"Steve",
         "homework":[],
         "quizzes": [],
@@ -37,7 +39,18 @@ tyler['homework'] = [0,87,75,22]
 tyler['quizzes'] = [0,75,78]
 tyler['tests'] = [100,100]
 
+Thomas = {'name':'Thomas',
+    'homework':[],
+    'quizzes':[],
+    'Tests':[],
+}
+Thomas['homework'] = [90,85,80,0]
+Thomas['quizzes'] = [80,100,87]
+Thomas['tests'] = [85,90]
+
 students = [steve, alice, tyler]
+students.append(Thomas)
+
 print(students)
 
 for student in students:
@@ -66,17 +79,17 @@ len(lst2)
 avg_steve_tests = float(sum(lst2))/len(lst2)
 print("Tests average score:")
 print(avg_steve_tests)
-#def average(homework):
-#    return sum(homework)/len(homework)
-#print(average)
-def get_weighted_average(students):
-    homework = student['homework']
-    quizzes = student['quizzes']
-    tests = student['tests']
-    weighted_average = .1*homework + .3*quizzes + .6*tests
 
-    return round(weighted_average,1)
+# def get_weighted_average(students):
+#     homework = sum([i*0.1 for i in student['homework']])/len(student['homework'])
+#     quizzes = sum([i*0.3 for i in student['quizzes']])/len(student['quizzes'])
+#     tests = sum([i*0.6 for i in student['tests']])/len(student['tests'])
+#     weighted_average = homework +  quizzes + tests
+
+#     return round(weighted_average,2)
+
 print(get_weighted_average(students))
+
 
 
 
@@ -94,6 +107,7 @@ print(get_weighted_average(students))
 #   Homework: 0, 87, 75, 22
 #   Quizzes: 0, 75, 78
 #   Tests: 100, 100
+
 
 
 # 3. Create a list called students that contains your three students and print the list
