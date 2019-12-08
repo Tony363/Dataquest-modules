@@ -80,13 +80,6 @@ avg_steve_tests = float(sum(lst2))/len(lst2)
 print("Tests average score:")
 print(avg_steve_tests)
 
-# def get_weighted_average(students):
-#     homework = sum([i*0.1 for i in student['homework']])/len(student['homework'])
-#     quizzes = sum([i*0.3 for i in student['quizzes']])/len(student['quizzes'])
-#     tests = sum([i*0.6 for i in student['tests']])/len(student['tests'])
-#     weighted_average = homework +  quizzes + tests
-
-#     return round(weighted_average,2)
 
 print(get_weighted_average(students,1))
 
@@ -171,3 +164,4 @@ print(get_weighted_average(students,1))
 
 # BONUS: Move all of the functions out of this file and into another Python file
 # called grading_functions.py. Then import them into this file so that it runs.
+
