@@ -88,7 +88,8 @@ print(avg_steve_tests)
 
 #     return round(weighted_average,2)
 
-print(get_weighted_average(students))
+print(get_weighted_average(students,1))
+
 
 
 
