@@ -43,7 +43,7 @@ def difference():
     return matrix
 
 print(generate_twins(0,100))
-print(difference())
+print(max(difference()))
     
     
   
