@@ -38,12 +38,19 @@ def generate_twins(start, end):
     
 def difference():
     matrix = generate_twins(0,100)
+    # print(list(zip(matrix,matrix)))
     matrix = [y[1] - x[1] for x,y in zip(matrix,matrix[1:])]
+    
     # print(matrix)
     return matrix
 
 print(generate_twins(0,100))
 print(max(difference()))
+# print(generate_twins(0,100))
+
+a = [i for i in range(10)]
+b = [i for i in range(10,0,-1)]
+print(list(zip(a,b)))
     
     
   
