@@ -245,3 +245,8 @@ def take_string(string):
         return True
         
 print(take_string('Instagram'),take_string('爱奇艺PPS -《欢乐颂2》电视剧热播'),take_string('Docs To Go™ Free Office Suite'),take_string('Instachat 😜'))
+
+# ["A" if b=="e" else "d" if True else "x" for b in "comprehension"]
+# ['d', 'd', 'd', 'd', 'd', 'A', 'd', 'A', 'd', 'd', 'd', 'd', 'd']
+
+##https://stackoverflow.com/questions/2951701/is-it-possible-to-use-else-in-a-list-comprehension
