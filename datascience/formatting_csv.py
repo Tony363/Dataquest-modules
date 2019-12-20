@@ -6,7 +6,7 @@ import os
 
 new_format = []
 
-INPUT_DIR = r"C:\Users\Tony\Desktop\github\xgboost-with-raymond\excel"
+INPUT_DIR = r"C:\Users\Tony\Desktop\stock market data\new york"
 
 for filename in os.listdir(INPUT_DIR):
 
@@ -17,7 +17,7 @@ for filename in os.listdir(INPUT_DIR):
         for row in head:
             # if 'ï»¿' in row:
             #     continue
-            new_format.append(int(row[0]))
+            new_format.append(row)
 
 print(new_format)
 
@@ -25,4 +25,4 @@ print(new_format)
 with open('Formated.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      for row in new_format:
-        wr.writerow([row])
+        wr.writerow(row)
