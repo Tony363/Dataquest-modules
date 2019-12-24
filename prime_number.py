@@ -1,4 +1,5 @@
 import statistics
+
 # https://www.tutorialspoint.com/How-to-generate-prime-twins-using-Python
 def is_prime(n):
    for i in range(2, n):
