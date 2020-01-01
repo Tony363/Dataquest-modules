@@ -1,5 +1,6 @@
 import statistics
 import pandas_datareader as pdr
+import xgboost as xgb
 
 # https://www.tutorialspoint.com/How-to-generate-prime-twins-using-Python
 def is_prime(n):
