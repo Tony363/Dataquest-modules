@@ -82,6 +82,7 @@
 # BONUS: Move all of the functions out of this file and into another Python file
 # called grading_functions.py. Then import them into this file so that it runs.
 
+from sklearn.datasets import fetch_openml
 from grading_function import get_weighted_average, class_average
 
 steve = {"name":"Steve",
