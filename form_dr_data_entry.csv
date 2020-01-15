@@ -1,0 +1,125 @@
+form_type,form_id,version,web_label,export_table,column_name,question_text,question_description,valid_value,export_value,data_type,format_type,field_size,logic,min_value,max_value,max_length
+DR,22774,5,Pre-Treatment Summary Form,form_dr,dtform,Date form originally completed,,,,date,yyyy-mm-dd,10,prefilled,5/12/2005,6/26/2014,9
+DR,22774,5,Pre-Treatment Summary Form,form_dr,dtamend,Date form amended,,,,date,yyyy-mm-dd,10,prefilled,11/15/2005,6/27/2014,10
+DR,22774,5,Pre-Treatment Summary Form,form_dr,amendby,"Person amending form, last name",,,,varchar,image to text,20,prefilled,4IZZYV,ZIEBOL,6
+DR,22774,5,Pre-Treatment Summary Form,form_dr,initials,"Patient Initials (first, middle, last)",,,,varchar,const print,3,prefilled,AA,ZZ,2
+DR,22774,5,Pre-Treatment Summary Form,form_dr,instcode,Patient Study ID,,,,varchar,const print,3,prefilled,1,862,3
+DR,22774,5,Pre-Treatment Summary Form,form_dr,protcode,Patient Study ID,,,,varchar,const print,4,prefilled,76,9929,4
+DR,22774,5,Pre-Treatment Summary Form,form_dr,sequence,Patient Study ID,,,,varchar,const print,3,prefilled,1,644,3
+DR,22774,5,Pre-Treatment Summary Form,form_dr,protsect,Patient Study ID,,,,varchar,const print,2,prefilled,,W,1
+DR,22774,5,Pre-Treatment Summary Form,form_dr,submittedby,"Person Completing Form, Last Name",,,,varchar,image to text,10,prefilled,4IZZYV,ZIEBOL,6
+DR,22774,5,Pre-Treatment Summary Form,form_dr,chestxray,(1) Chest X-Ray Result,,"Not Done,Normal Abnormal,specify","D,N,A",varchar,single choice,1,mandatory,A,N,1
+DR,22774,5,Pre-Treatment Summary Form,form_dr,spchestxray,"Abnormal,specify",,,,varchar,image to text,100,"required if Abnormal,specify",BILATERAL PLEURAL EFFUSIONS RIGHT GREATER THAN LEFT. DIAPHRAGMATIC LYMPH NODES,WORSENING PLEURAL EFFUSION,78
+DR,22774,5,Pre-Treatment Summary Form,form_dr,dtchestxray,(1a) Date of Chest X-Ray,,,,date,yyyy-mm-dd,10,not required if Not Done,4/12/2005,6/24/2014,10
+DR,22774,5,Pre-Treatment Summary Form,form_dr,ekg,(2) EKG Result,,"Not Done,Normal Abnormal,specify","D,N,A",char,single choice,1,not required if Not Done,A,N,1
+DR,22774,5,Pre-Treatment Summary Form,form_dr,spekg,"Abnormal,specify",,,,varchar,image to text,100,"required if Abnormal,specify",NONSPECIFIC T WAVE ABNORMALITY ANTERIOR LEADS,WNL,3
+DR,22774,5,Pre-Treatment Summary Form,form_dr,dtekg,(2a) Date of EKG,,,,date, yyyy-mm-dd,10,not required if Not Done,1/1/1948,6/24/2014,10
+DR,22774,5,Pre-Treatment Summary Form,form_dr,mri,(3) MRI Result,,"Not Done,Normal Abnormal,specify","D,N,A",varchar,single choice,1,not required if Not Done,A,N,1
+DR,22774,5,Pre-Treatment Summary Form,form_dr,spmri,"Abnormal,specify",,,,varchar,image to text,100,"required if Abnormal,specify","1. C/W UTERINE CERVIX CANCER, FIGO STAGE IIA.",WITHIN THE ENDOMETRIAL CANAL THERE IS INTERMEDIATE T1 AND T2 SIGNAL WHICH SHOWS MILD ENHANCEMENT,100
+DR,22774,5,Pre-Treatment Summary Form,form_dr,dtmri,(3a) Date of MRI,,,,date, yyyy-mm-dd,10,not required if Not Done,4/1/2005,5/29/2014,10
+DR,22774,5,Pre-Treatment Summary Form,form_dr,ctscan,(4) CT Result,,"Not Done,Normal Abnormal,specify","D,N,A",varchar,single choice,1,not required if Not Done,A,N,1
+DR,22774,5,Pre-Treatment Summary Form,form_dr,spct,"Abnormal,specify",,,,varchar,image to text,100,"required if Abnormal,specify","7CM FLUID COLLECTION SUPERIOR TO THE VAGINAL CUFF. THIS COULD REPRESENT SEROMA,HEMATOMA OR EXUDATE","WOUND SEROMA, NO EVIDENCE OF DISEASE",36
+DR,22774,5,Pre-Treatment Summary Form,form_dr,dtctscan,(4a) Date CT Scan,,,,date,yyyy-mm-dd,10,not required if Not Done,11/23/2000,6/20/2014,10
+DR,22774,5,Pre-Treatment Summary Form,form_dr,other,"Abnormal,specify",,,,varchar,image to text,1,not required if Not Done,A,N,1
+DR,22774,5,Pre-Treatment Summary Form,form_dr,procspec,"(5) Other Procedure Performed, specify",,"Not Done,Normal Abnormal,specify","D,N,A",varchar,image to text,60,"required if Normal or Abnormal,specify",CARDIAC 2 D ECHO,XRAY OF ABDOMEN/ WITH PA CHEST,30
+DR,22774,5,Pre-Treatment Summary Form,form_dr,spother,"Abnormal,specify",,,,varchar,image to text,100,"required if Abnormal,specify",3MM NODULAR OPACITY RUL. GROUND GLASS OPACITY IN THE LLL,XRAY NECK ANT SUBLUXATION C1 ON CZ LIKELY....,56
+DR,22774,5,Pre-Treatment Summary Form,form_dr,dtother,(5a) Procedure Date,,,,date, yyyy-mm-dd,10,not required if Not Done,4/4/1941,6/17/2014,10
+DR,22774,5,Pre-Treatment Summary Form,form_dr,tumoreval,(6) Are there any target lesions?,"if yes, (complete the BDR form if required by the protocol)","No,Yes","N,Y",varchar,single choice,1,complete the BDR form if required by the protocol,N,Y,1
+DR,22774,5,Pre-Treatment Summary Form,form_dr,comment,Comments,,,,varchar,image to text,1000,,"
+
+
+","ZIMBABWEAN FEMALE WHO HAS A HISTORY OF ENDOMETRIAL CARCINOMA GRADE PT3A N0 M0.  SHE COMPLETED HER CHEMOTHERAPY IN
+06/2012 AND RECEIVED A POSITRON EMISSION TOMOGRAPHY PET SCAN ON 08/06/2012 FOR FOLLOWUP EVALUATION OF HER DISEASE.  UNFORTUNATELY,
+THE PET SCAN SHOWS NEW DISEASE",30
+DR,22774,5,Pre-Treatment Summary Form,form_dr,groupname,,null,,,varchar,image to text,10,,,,
+DR,22774,5,Pre-Treatment Summary Form,form_dr,groupstudyid,,datetime of submisssion,,,varchar,open text field - yyyy-mm-dd hh:mm:ss,20,prefilled,8/1/2006 11:51,9/9/2013 17:13,19
+DR,22774,5,Pre-Treatment Summary Form,form_dr,groupptid,,prefilled with fmtype ,,,varchar,image to text,20,prefilled,D2MV3,DR,2
+DR,22774,5,Pre-Treatment Summary Form,form_dr,batchcust1,virtual fields,null,,,varchar,image to text,30,field that’s in the table but not on the form,,,
+DR,22774,5,Pre-Treatment Summary Form,form_dr,csid,virtual fields,prefilled Y if it has been saved but not submitted,,,varchar,single choice,30,field that’s in the table but not on the form,,,
+DR,22774,5,Pre-Treatment Summary Form,form_dr,fmtype,virtual fields,prefilled with form type,,,varchar,image to text,30,field that’s in the table but not on the form,DR,DR,2
+DR,22774,5,Pre-Treatment Summary Form,form_dr,form_id,virtual fields,prefilled with form id ,,,decimal,image to text,10,field that’s in the table but not on the form,22774,38138,5
+DR,22774,5,Pre-Treatment Summary Form,form_dr,filename,virtual fields,prefilled with filename of it''s location,,,varchar,image to text,125,field that’s in the table but not on the form,\\teleform10s\FormImages\0076GG\020-0076GG-188\Form-DR_20081205153515.tif,\\teleform10s\FormImages\9929\862-9929-001\Form-DR_20140529140931.tif,73
+DR,22774,5,Pre-Treatment Summary Form,form_dr,orig_file,virtual fields,null,,,varchar,image to text,128,field that’s in the table but not on the form,,,
+DR,22774,5,Pre-Treatment Summary Form,form_dr,receiv_type,virtual fields,prefilled to show how the form was entered,,,varchar,image to text,30,field that’s in the table but not on the form,Web,Web,3
+DR,22774,5,Pre-Treatment Summary Form,form_dr,remote_fax,virtual fields,null,,,varchar,image to text,30,field that’s in the table but not on the form,,,
+DR,22774,5,Pre-Treatment Summary Form,form_dr,suspense_file,virtual fields,prefilled with temporary file name,,,varchar,image to text,30,field that’s in the table but not on the form,002M0A0000.tct,ZZZCBS0000.tct,14
+DR,22774,5,Pre-Treatment Summary Form,form_dr,time_stamp,virtual fields,datetime of entry in table,,,varchar, yyyy-mm-dd,30,field that’s in the table but not on the form,1/2/2007 14:31,9/9/2013 17:13,19
+DR,22774,5,Pre-Treatment Summary Form,form_dr,dtprocessed,virtual fields,date form processed,,,date, yyyy-mm-dd,10,field that’s in the table but not on the form,6/16/2005,6/27/2014,10
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
