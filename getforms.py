@@ -72,7 +72,8 @@ tables = cursor.fetchall()
 for column in tables:
     csvDF1['column_name'].append(column[0]) 
     csvDF1['data_type'].append(column[1]) 
-    csvDF1['field_size'].append(column[2]) 
+    csvDF1['field_size'].append(column[2])
+    max_query = ("""select max(%s) from %s""") % (column[0], tableName) 
     
     #sql to get footer fields prefilled    
 headerQuery = ("""
@@ -103,7 +104,7 @@ for data in header:
     #adding it to csvDF1 and formatted  ([0][0] given a list of lists value in the list at the 0 index and 0 value of 2nd list)
     csvDF1['min_value'].append(mins[0][0])
     #sql to get maximum value from each field and formatted to only get what we need
-    max_query = ("""select max(%s) from %s""") % (column[0], tableName)
+   
     cursor.execute(max_query)  
     maxes = cursor.fetchall()
     csvDF1['max_value'].append(maxes[0][0])

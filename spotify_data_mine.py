@@ -73,7 +73,7 @@ result = sp.search(APIname) #search query
 items = result['tracks']['items']
 
 with open('spotify_monthly_listners.json', 'w') as outfile:
-    json.dump(items, outfile, sort_keys=True, indent=4)
+    json.dump( ms, outfile, sort_keys=True, indent=4)
 
 
 album_uris = map(mapping, items)
