@@ -28,6 +28,11 @@ PARAMETERS = {'max_depth': 2,
               'lambda': 1,
               'gamma': 0,
               'min_child_weight': 0,}
+# PARAMETERS = {
+#     'max_depth': 2,
+#     'eta': 2,
+#     'verbosity': 1,
+# }
 
 def example_1(objective,X,y):
     """
@@ -40,7 +45,7 @@ def example_1(objective,X,y):
 
     parameters = PARAMETERS.copy()
     parameters['objective'] = objective
-    parameters['num_class'] = 3
+    # parameters['num_class'] = 3
 
     # if objective == 'reg:squarederror':
     #     X_train = np.array([[0],
@@ -93,9 +98,9 @@ def example_1(objective,X,y):
 
 
 if __name__ == '__main__':
-#    example_1('reg:squarederror')
-#    example_1('binary:logistic')
-    example_1('multi:softprob',X,y)
+   example_1('reg:squarederror',X,y)
+#    example_1('binary:logistic',X,y)
+    # example_1('multi:softprob',X,y)
 
 
 
