@@ -6,7 +6,8 @@ import xgboost as xgb
 import yfinance as yf
 import matplotlib.pyplot as plt
 from matplotlib import style
-
+ 
+#####GOTTA FIGURE OUT HOW TO USE n_estimators
 style.use('ggplot')
 
 def example_1(objective,X,y):
