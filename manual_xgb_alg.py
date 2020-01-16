@@ -19,7 +19,7 @@ Get examples for XGBoost
 
 import numpy as np
 import xgboost as xgb
-from yfinance_data import X,y
+from yfinance_data import *
 from sklearn.model_selection import train_test_split
 
 
@@ -27,15 +27,20 @@ PARAMETERS = {'max_depth': 2,
               'eta': 0.5,
               'lambda': 1,
               'gamma': 0,
-              'min_child_weight': 0}
+              'min_child_weight': 0,}
 
 def example_1(objective,X,y):
     """
     Simple data
     """
 
+    X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=0)
+
+    # nc = len(np.unique(y_train))
+
     parameters = PARAMETERS.copy()
     parameters['objective'] = objective
+    parameters['num_class'] = 3
 
     # if objective == 'reg:squarederror':
     #     X_train = np.array([[0],
@@ -71,15 +76,14 @@ def example_1(objective,X,y):
     # else:
     #     raise ValueError('Not a recognized objective')
 
-    X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=0)
-
+    
 
     data_train = xgb.DMatrix(X_train, y_train)
     data_test = xgb.DMatrix(X_test, y_test)
 
-    bst = xgb.train(parameters,
-                    data_train,
-                    3)
+    bst = xgb.train(params=parameters,
+                    dtrain=data_train,)
+                    # num_boost_round=3)
 
     dump = bst.get_dump(with_stats=True)
     for tree in dump:
