@@ -24,7 +24,7 @@ def example_1(objective,X,y):
     # parameters['num_class'] = 3
     #print(len(y_test))
     #print(len(y_train))
-
+/home/tony/Downloads
     
     data_train = xgb.DMatrix(X_train, y_train)
     data_test = xgb.DMatrix(X_test, y_test)
@@ -65,7 +65,7 @@ PARAMETERS = {'max_depth': 2,
               'min_child_weight': 0,}
 
 
-path = r'C:\Users\Tony\Downloads\TONY_AMEX_20190905.csv'
+path = r'/home/tony/Downloads/AMEX_20190905.csv'
 
 df = pd.read_csv(path,names=['stock','date','open','high','low','close','volume','dividends'])
 
