@@ -90,12 +90,14 @@ for i,stock in enumerate(df):
     names.drop(names.index[0],inplace=True)
     names = names.reset_index()
     names = names[['Stock','PCT_Change_Close','PCT_Change_Open','PCT_Change_Low','PCT_Change_High','PCT_Change_Vol','Date']]
-    
-    matrix = []
-    for i in range(100):
-#         days = names.PCT_Change_Close.iloc[i:]
-        days = names.PCT_Change_Close.shift(-i)
-        df = pd.DataFrame({f'Days {i}':days.values})
+        
+
+
+PARAMETERS = {'max_depth': 2,
+              'eta': 0.5,
+              'lambda': 1,
+              'gamma': 0,
+              'min_child_weight': 0,}days.values})
         #print(df)
         
         matrix.append(df)
