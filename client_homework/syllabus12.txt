@@ -1,0 +1,235 @@
+Carnegie Mellon University
+Dietrich College
+
+Information Systems
+INFORMATION SYSTEMS MILIEUX (67-250)
+
+Course Description and Syllabus
+
+   
+
+instructor: | Term: Fall 208
+Office: | Class Meeting Days: Tuesdays and Thursdays
+' Email: i Class Meeting Time: | 3:00-4:20 PM
+
+if
+Office Hours: | By appointment | Class Location: | HHB131
+
+COURSE DESCRIPTION
+
+- Information systems (IS) are changing. work practices, reshaping organizations, transforming
+cultures, and giving new.meaning to the ways we see the world. This course is designed to help
+students understand the role of IS in the-enterprise and the means by which these systems are
+created, utilized and maintained. The course will focus on enterprise information architecture
+including the components of enterprise strategy, business, application, information, and
+infrastructure layers. This course provides not only a framework for understanding information
+systems, but also a language to identify.their dynamic complexities and interdependencies.
+
+Topics include: enterprise systems and integration, gaining competitive advantage with IS, business
+process reengineering and change management, structured approaches to the creation of IS, project
+management, eCommerce, mobile computing and the digital economy, front-end web development,
+database design and modeling, decisions support systems, information security and privacy, and the
+implications of IS for people, enterprises and society.
+
+This course will use a combination of lectures, class discussions, reading assignments, case studies,
+group projects, and “hands-on” work.
+
+OBJECTIVES AND LEARNING OUTCOMES
+Upon successful completion of the course, students will have gained an understanding of information
+
+systems and associated topics. Specific learning objectives are:
+
+¢ Identify the fundamental concepts.and key issues of the information systems discipline and
+the role of information in the enterprise.
+
+e Describe various information systems within an enterprise view including the enterprise
+strategy, business, application, information, and infrastructure layers.
+
+.e Discuss and analyze linkages between business / organization process and information
+strategy and how enterprises can achieve competitive advantage with strategic deployments
+
+of IS.
+
+'«  Analyze-enterprise case studies that focus on issues of the strategic value of IS in order to
+evaluate costs, benefits, and risks of projects and determine the effectiveness of different
+applications or technologies in a particular context.
+
+« Apply structured approaches and techniques to design and build a front-end web prototype.
+e Design and build a database and analyze information for enterprise decision-making.
+
+e Demonstrate your responsibilities and contributions in a team-based environment based
+upon pre-negotiated group timelines, roles and deliverables.
+
+67-250 COURSE DESCRIPTION AND SYLLABUS | 1COURSE MATERIALS .
+- Assigned reading materials should be read prior to class. Class lectures and discussions will proceed
+
+with supplemental and advanced topics, which could be difficult to understand unless you have read
+the assigned material, Readings are listed in the schedule section. All necessary updates and/or
+changes to the course will be reflected in Blackboard.
+
+Required Text
+
+Managing and Using Information Systems: A Strategic Approach
+By: Keri E. Pearlson and Carol S. Saunders
+
+ISBN-13: 978-1118281734, Fifth Edition, 2012, Wiley Publishing
+
+Required Readings
+Additional required readings will be assigned during the semester.
+These readings will consist of electronic PDFs articles (available in Blackboard).
+
+ 
+
+COURSE EVALUATION ,
+In order to successfully pass the course, students will be expected to complete the activities listed
+
+below. Weights indicate the contribution to the final course grade.
+
+Attendance, Homework Assignments, In-Class Activities and Quizzes (15%): This component of
+the final grade is based upon your contribution to the class in the form of: attendance, homework
+assignments, class attendance, activities, and quizzes. Activities not completed during course time
+will be due at the beginning of the following class. Any number of unannounced quizzes may be
+given during the semester at the beginning of class or at the end of class. A quiz may cover material
+from the assigned reading, any previous class period, or the current class period. In-class activities
+
+and quizzes cannot be made up.
+
+Case Studies {10%): This component of the final grade is based on reading and critiquing two
+business case studies {worth 5% each).
+
+Development Projects (20%): This component of the final grade is based upon two development
+projects - a front-end web development project and a database analysis and design project (worth
+
+10% each}.
+
+Term Project (15%): This component of the final grade is based upon a group project in which you
+will work in small teams of 4 to 5 people to address a business case study featuring the application of
+an emerging technology to solve a business problem or create a new business model {worth 15%).
+
+Examinations (40%): This component of the final grade is based upon performance on two
+individual examinations. Both exams are mandatory. The examination will cover both reading and
+class discussions and will be closed book. The exams will be non-cumulative. .
+
+Other Items: Other factors, such as class and group participation and punctual, regular attendance
+may be used, at the professor’s discretion, to make adjustments to final grades in borderline cases.
+The instructor will assume that you are well prepared for class each week and will feel free to call
+
+upon you.
+
+2 ; 67-250 COURSE DESCRIPTION AND SYLLABUSGrading Scale: The following criteria provide guaranteed letter grades if a student's overall scores
+fail within the stated range:
+
+Grading Scale Interpretation
+
+ 
+
+0~ 59% R
+
+90-100% A_ | Excellent, exceeds average understanding as evidenced in course work and
+. | goes well beyond the basics.
+
+80-89% .B Far above average, fully meets average understanding as evidenced in course
+i work and fully understands the basics and can deal with concepts somewhat
+| beyond that level. .
+
+70 - 79% Cj Average, meets minimum expectations and satisfies course requirements.
+
+60-69%  D_ | Below average, meets many minimum expectations and satisfies all or most
+| course requirements.
+Fails to meet minimum expectations in understanding and course work as
+
+evidenced by performance and submission of graded elements.
+
+COURSE AND UNIVERSITY POLICIES
+
+Attendance and Preparation for Class: You are expected to attend all scheduled class sessions with
+your reading and supplementary materials. Readings are to be completed prior to class.
+
+Participation in Class Discussions: Class participation is a very important part of the learning
+process in this course. Although not explicitly graded, you will be evaluated on the QUALITY of your
+contributions and insights. Quality comments possess one or more of the following properties:
+
+e Offers a different and unique, but relevant, perspective
+
+° Contributes to moving the discussion and analysis forward
+
+e Builds on other comments
+
+0 Transcends the “I feel” syndrome.. That is, it includes some evidence, argumentation, or
+
+recognition of inherent tradeoffs. In other words, the comment demonstrates some
+reflective thinking.
+Laptops and handheld devices can ONLY be used for classroom purposes when directed by the
+instructor. Misuse of laptops or handheld devices will be considered a breach of discipline and
+
+appropriate action will be initiated by the instructor.
+
+Absences: Absence from class is inexcusable and will result in a reduction in your performance
+evaluation. In the event you have an excused absence from class (e.g. a job interview) you must
+contact the instructor ahead of time. In this situation, get a “classroom buddy” who is willing to fill
+you in on the class that you missed.
+
+Assignments: In both the professional and academic world, you must meet deadlines. In this class,
+all projects are due at the beginning of class on the dates indicated on the syllabus, unless otherwise
+stated. Assignments handed in or emailed after class has begun will be considered late.
+
+Late Assignments: Most assignments will be discussed in class on the due date, therefore late
+assignments will not receive credit. It is expected that all work will be submitted on time. In a few
+cases and announced in class, assignments will be assessed a 10% penalty each day they are late.
+The late penalty increases linearly with lateness: each day after the due date, an additional 10% is
+subtracted from the score. So, if you submit a perfect assignment a day late, you earn 100% - 10% =
+90%; two days late, you earn 100% - 20% = 80% and so forth. No credit will be given for assignments
+
+turned in more than five days past the due date.
+
+‘ Equipment failure is not an acceptable reason for turning in an assignment late. You should always
+make a backup of your files. You should make sure you print out your work early enough that you
+can find an alternate location to print, if necessary.
+
+67-250 COURSE DESCRIPTION AND SYLLABUS { 3Exams: Appropriate documentary evidence certified by the Division of Student Affairs is required
+for missing a critical activity or due date. Exams missed due to an excused absence {arranged with
+the professor ahead of time) must be made up within one week for full credit or no credit will be
+given. Documentation proving the excused absence will be required before or during the time the
+exam is made up. Exams missed due to an unexcused absence cannot be made up.
+
+Academic Integrity: CMU students are expected to follow the ethical guidelines and cheating and
+plagiarism policies defined in the The Word, Please read it carefully! You will be held accountable for
+violations of these guidelines and policies that come to my attention.
+
+Cheating and plagiarism are defined in the CMU Student Handbook, and include (1) submitting work
+that is not your own for papers, assignments, or exams; (2) copying ideas, words, or graphics from a
+published or unpublished source without appropriate citation; (3) submitting or using falsified data;
+and (4) submitting the same work for credit in two courses without prior consent of both instructors. °
+Any student who is found cheating or plagiarizing on any work for this course will receive no credit
+for that work. Further action will also be taken if necessary.
+
+While I encourage you to be helpful to your classmates, you must understand that the work you turn
+in for evaluation or credit must be your own. You are welcome to talk with-other students about
+general course content, requirements, and technology issues. You are not welcome to offer, or to ask
+for, substantial, material assistance to, or from, other students in completing specific aspects of
+graded assignments for individual credit. If there is any doubt in your mind about a particular
+situation, ask yourself this question: "How would | feel if I observed another student or students
+engaging in this particular behavior?” Any student who turns in work for credit that is identical or
+similar beyond coincidence, to that of another student (current or past) may face appropriate
+disciplinary action at the department, college, or university level.
+
+Content copied from the Internet and reproduced verbatim in assignments or other submissions will
+be treated as plagiarized material, even if the source is cited. More information at:
+
+http://www.cmu.edu/policies/documents/Academic%20Integrity.htm.
+
+An Invitation to Students with Learning Disabilities: Carnegie Mellon University is committed to
+providing reasonable accommodations for all persons with disabilities, Students with disabilities
+who need accommodations in this course must contact the professor at the beginning of the semester
+to discuss needed accommodations. Students who need accommodations must be registered with
+Disability Resources at 102 Whitfield Hall 412.268.2013, or with Larry Powell, Equal Opportunity
+
+Services Manager, at: lpowell@andrew.cmu.edu.
+
+Contacting the Instructor: The easiest and most reliable way to get in touch with me is by e-mail.
+Feel free to send me e-mail if you have a question related to the course. I will respond as soon as I can
+but not always instantaneously. Besides that, you are also welcome to stop by my office any time to
+discuss the class. Please understand that I may not be free to talk to you at that time, but, in that
+event, we can make an appointment for a later time that is mutually convenient.
+
+4 67-250 COURSE DESCRIPTION AND SYLLABUS

@@ -1,0 +1,43 @@
+{
+    "base": "stations",
+    "clouds": {
+        "all": 1
+    },
+    "cod": 200,
+    "coord": {
+        "lat": 28.41,
+        "lon": -81.78
+    },
+    "dt": 1582905763,
+    "id": 0,
+    "main": {
+        "feels_like": 281.98,
+        "humidity": 47,
+        "pressure": 1026,
+        "temp": 286.48,
+        "temp_max": 287.59,
+        "temp_min": 285.15
+    },
+    "name": "Clermont",
+    "sys": {
+        "country": "US",
+        "id": 6357,
+        "sunrise": 1582890823,
+        "sunset": 1582932367,
+        "type": 1
+    },
+    "timezone": -18000,
+    "visibility": 16093,
+    "weather": [
+        {
+            "description": "clear sky",
+            "icon": "01d",
+            "id": 800,
+            "main": "Clear"
+        }
+    ],
+    "wind": {
+        "deg": 350,
+        "speed": 4.1
+    }
+}

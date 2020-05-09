@@ -1,0 +1,8 @@
+venv
+.vscode
+pdfs
+.ipynb_checkpoints
+mortgage
+__pycache__
+excel_files
+json_files

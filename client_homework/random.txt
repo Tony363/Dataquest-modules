@@ -1,0 +1,142 @@
+Lab 5: Heat Equation
+
+11/26/2019
+
+Lab 5: Heat Equation
+Programming Language: Your choice, but I recommend Matlab or Python
+Due date: December 06, 2019. NOTE: Extensions on this lab will not be given.
+Submit online through Canvas
+Submission Instructions: To get credit for this assignment, you must submit the following information in a .zip or .tar file to your lab instructor by 11:59pm on the date above:
+• Your report as a single file in PDF format, including your plots, analytical work and results,
+and relevant discussion on your observations, results, and conclusions.
+• Your code, including all functions relevant to the lab and your driver.
+
+1
+
+Heat Equation
+
+The heat equation is an example of an initial boundary value problem (IBVP). These equations
+require an initial condition (like initial value problems), and boundary conditions (like boundary
+value problems). A forced heat equation with periodic boundary conditions and diffusion condition
+D = 1 is given by:
+ut − uxx = f (x, t)
+
+0 < x < 2π, t ∈ (0, 5],
+
+u(0, t) = u(2π, t)
+0
+
+0
+
+t ∈ (0, 5],
+
+u (0, t) = u (2π, t)
+
+t ∈ (0, 5],
+
+u(x, 0) = u0 (x)
+
+0 < x < 2π.
+
+Since this equation combines many of the characteristics of IVPs and BVPs, we can apply the
+techniques we used to solve those problems to this one.
+
+1.1
+
+Rothe’s Method
+
+If we let f (x, t) = 0, we are left with
+ut = uxx .
+The ut term can be discretized using the first order finite difference scheme,
+U k+1 − U k
+.
+∆t
+at k + 1 so that we do not end up with a stiff system. The resulting
+ut ≈
+
+We can choose to discretize uxx
+scheme looks like
+
+U k+1 − U k
+k+1
+= Uxx
+,
+∆t
+which can be rearranged to look like
+k+1
+U k+1 − ∆tUxx
+= U k.
+
+This equation is now a BVP and can be solved using the mean weighted residual code you developed
+in the last lab.
+ISC 4232
+
+Lab 5: Heat Equation
+
+1.2
+
+11/26/2019
+
+Exercise
+
+Apply Rothe’s method to the heat equation and solve the resulting BVP with the mean weighted
+residual method. Use φ(x) and w(x) from section 4.1 of lab 4, let α = ∆t, where ∆t = 0.1. The
+right hand side, U , is evaluated at the previous time step. NOTE: In this problem you will need to
+use quadrature to find your RHS for each iteration. Consider using the left-hand sum rule:
+
+ length(x)
+P
+U
+(1)
+∗
+w
+(x
+)
+∗
+dx
+old
+1 i
+
+
+
+ i=0
+
+ length(x)
+P
+
+
+Uold (2) ∗ w2 (xi ) ∗ dx 
+
+.
+
+RHS =  i=0
+
+..
+
+
+
+
+.
+
+length(x)
+
+ P
+Uold (N ) ∗ wN (xi ) ∗ dx
+i=0
+
+Our initial condition for this problem will be
+u0 (x) = ecos(x) .
+Use the coefficients found at times T = 0, 1, 2, 3, 4, 5 to plot
+h
+
+u (x) =
+
+N
+X
+j=1
+
+ISC 4232
+
+cj φj (x).
+
+
