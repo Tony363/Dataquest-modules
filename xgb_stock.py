@@ -30,22 +30,23 @@ for i,stock in enumerate(df):
     history = names.history(start='2002-02-01',end='2020-02-25')
     names = pd.DataFrame(history)
 
-    names['PCT_Change_Close'] =  names.Close.pct_change()
-    names['PCT_Change_Low'] = names.Low.pct_change()
-    names['PCT_Change_Open'] = names.Open.pct_change()
-    names['PCT_Change_High'] = names.High.pct_change()
-    names['PCT_Change_Vol'] = names.Volume.pct_change()
+    # names['PCT_Change_Close'] =  names.Close.pct_change()
+    # names['PCT_Change_Low'] = names.Low.pct_change()
+    # names['PCT_Change_Open'] = names.Open.pct_change()
+    # names['PCT_Change_High'] = names.High.pct_change()
+    # names['PCT_Change_Vol'] = names.Volume.pct_change()
     names['Stock'] = stock
    
     names.drop(names.index[0],inplace=True)
     names = names.reset_index()
    
-    names = names[['Stock','PCT_Change_Close','PCT_Change_Open','PCT_Change_Low','PCT_Change_High','PCT_Change_Vol','Date']]
+    # names = names[['Stock','PCT_Change_Close','PCT_Change_Open','PCT_Change_Low','PCT_Change_High','PCT_Change_Vol','Date']]
 
     matrix = []
     for i in range(30):
-#         days = names.PCT_Change_Close.iloc[i:]
-        days = names.PCT_Change_Close.shift(i)
+
+        # days = names.PCT_Change_Close.shift(i)
+        days = names.Close.shift(-i)
         df = pd.DataFrame({f'Days_{i}':days.values})       
         matrix.append(df)
     matrix = pd.concat(matrix,axis=1)
@@ -510,56 +511,77 @@ for i in range(0, len(imp_cols)):
         X_test.iloc[j,:][imp_cols[i]],  
         df_shap_XGB_test.iloc[j,:][imp_cols[i]])
 
+def scatter_plot(y_test,pred_test):
+    """
+    Parameters
+    ----------
+    y_test : validation set.
+    pred_test : prediction on test.
 
+    Returns
+    -------
+    scatter plot.
+
+    """
+    fig, ax = plt.subplots()
+    ax.scatter(y_test,pred_test, color='b')
+    #ax.plot([y_test.min(),y_test.max()],[y_test.min(),y_test.max()],'k--',lw=4)
+    ax.set_xlabel('preds')
+    ax.set_ylabel('y_test')
+    ax.set_title('scatter plot')
+    plt.show()
+
+# scatter plot
+plot = scatter_plot(y_test, predictions_API)
 
 
 ########## With Sklearn xgboost wrapper using GridSearchCV
 
-param_grid = {
-    'n_estimators': [400, 700, 1000],
-    'colsample_bytree': [0.7, 0.8],
-    'max_depth': [15,20,25],
-    'reg_alpha': [1.1, 1.2, 1.3],
-    'reg_lambda': [1.1, 1.2, 1.3],
-    'subsample': [0.7, 0.8, 0.9],
+# param_grid = {
+#     'n_estimators': [400, 700, 1000],
+#     'colsample_bytree': [0.7, 0.8],
+#     'max_depth': [15,20,25],
+#     'reg_alpha': [1.1, 1.2, 1.3],
+#     'reg_lambda': [1.1, 1.2, 1.3],
+#     'subsample': [0.7, 0.8, 0.9],
     
-}
+# }
 
-regressor = XGBRegressor(n_jobs=-1,objective='reg:squarederror')
+# regressor = XGBRegressor(n_jobs=-1,objective='reg:squarederror')
 
-grid = GridSearchCV(regressor,param_grid,n_jobs=-1)
+# grid = GridSearchCV(regressor,param_grid,n_jobs=-1)
 
-# + https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+# # + https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
 
-start_time = timer(None)
-
-
-grid.fit(X_train,y_train)
-
-# fitting train data to grid search tuned parameters
-
-timer(start_time)
-
-best_pars = grid.best_params_
-best_model = grid.best_estimator_
+# start_time = timer(None)
 
 
-pickle.dump(grid.best_estimator_, open('sklearn_xgb_model','wb'))
+# grid.fit(X_train,y_train)
 
-predictions = grid.predict(X_test)
+# # fitting train data to grid search tuned parameters
 
-print(mean_squared_error(y_test,grid.best_estimator_.predict(X_test)))
+# timer(start_time)
 
-# mean sqaured error scoring and root squared scoring available from sklearn metrics
-pred = pd.DataFrame(predictions)
-print(predictions)
+# best_pars = grid.best_params_
+# best_model = grid.best_estimator_
 
-fig, ax = plt.subplots()
-ax.scatter(y_test,pred, color='b')
-ax.plot([y_test.min(),y_test.max()],[y_test.min(),y_test.max()],'k--',lw=4)
-ax.set_xlabel('preds')
-ax.set_ylabel('y_test')
-ax.set_title('scatter plot')
-plt.show()
+
+# pickle.dump(grid.best_estimator_, open('sklearn_xgb_model','wb'))
+
+# predictions = grid.predict(X_test)
+
+# print(mean_squared_error(y_test,grid.best_estimator_.predict(X_test)))
+
+# # mean sqaured error scoring and root squared scoring available from sklearn metrics
+# pred = pd.DataFrame(predictions)
+# print(predictions)
+
+# fig, ax = plt.subplots()
+# ax.scatter(y_test,pred, color='b')
+# ax.plot([y_test.min(),y_test.max()],[y_test.min(),y_test.max()],'k--',lw=4)
+# ax.set_xlabel('preds')
+# ax.set_ylabel('y_test')
+# ax.set_title('scatter plot')
+# plt.show()
 
 
