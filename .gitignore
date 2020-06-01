@@ -16,3 +16,5 @@ output.mp4
 substraction.py
 metrics.py
 output.avi
+output_faster.avi
+output_moving.avi

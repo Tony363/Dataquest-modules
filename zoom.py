@@ -6,10 +6,10 @@ import numpy as np
 
 cap = cv2.VideoCapture('videos/tennis_play_1.mp4')
 
-# out = cv2.VideoWriter('output.avi',fourcc, 20.0, (int(cap.get(3)), int(cap.get(4))))
 # Define the codec and create VideoWriter object 
 fourcc = cv2.VideoWriter_fourcc(*'XVID') 
 out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480)) 
+out = cv2.VideoWriter('output.avi',fourcc, 20.0, (int(cap.get(3)), int(cap.get(4))))
 
 def make_1080():
     cap.set(3,1920)
@@ -44,24 +44,28 @@ def shift_frame(frame):
 resolution = [make_480p,make_720p,make_1080]
 
 def zoomin(video,speed,x,y,w,h):
-    ret,frame = cap.read() 
+    ret,frame = video.read() 
     rows,cols,rgb = frame.shape
-    stop = frame[w:,h:].shape
-    original = frame.shape   
+    stop = frame[w:,h:].shape 
+
+    shift = 0 
     while True:
-        if frame.shape[0] > stop[0] and frame.shape[1] > stop[1]:
-            frame = frame[speed:x,speed:y]
-            resized = cv2.resize(frame,  (640, 480))
-        else:
-            frame = frame
-            resized = cv2.resize(frame, (640, 480))
+        ret,frame = video.read() 
+        if rows > stop[0] and cols > stop[1]:
+            # frame = frame[shift:x,shift:y]
+            # resized = cv2.resize(frame,(int(cap.get(3)), int(cap.get(4))))
+            shift += speed
+            # rows, cols, rgb = frame.shape
+        frame = frame[shift:x,shift:y]
+        resized = cv2.resize(frame,(int(cap.get(3)), int(cap.get(4))))
+        rows, cols, rgb = frame.shape
         out.write(resized)
         cv2.imshow("frame", resized)
         if cv2.waitKey(1) & 0xFF == ord('q'): 
             break
-        rows,cols,rgb = frame.shape
+ 
         
-zoomin(cap,10,2156,5034,2000,2000)
+zoomin(cap,21,2156,5034,2000,2000)
 # release the cap object
 out.release()
 cap.release() 
