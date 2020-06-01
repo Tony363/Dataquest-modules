@@ -584,4 +584,3 @@ plot = scatter_plot(y_test, predictions_API)
 # ax.set_title('scatter plot')
 # plt.show()
 
-
